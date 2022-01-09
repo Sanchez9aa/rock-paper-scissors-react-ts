@@ -1,28 +1,14 @@
 import styled from "styled-components";
 
-const PickUpDiv = styled.div`
+const GameDiv = styled.div`
 display:flex;
-justify-content:center;
+justify-content: space-evenly;
 align-items:center;
 max-width: 900px;
-flex-direction: column;
+width: 100%;
 margin:auto;
+heigth: 450px;
 
-.two{
-    display:flex;
-	justify-content: space-evenly;
-	align-items:center;
-	width: 100%;
-	margin: 100px auto;
-	margin:bottom: 0 !important
-}
-.one{
-	display:flex;
-	justify-content: center;
-	align-items:center;
-	margin: 100px auto;
-	margin:bottom: 0 !important
-}
 .svg{
     transform: scale(1.75);
     display: flex;
@@ -78,11 +64,24 @@ margin:auto;
     -webkit-mask-composite: destination-out;
 	z-index:10
 }
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-.svg:hover{
-	transform: scale(1.85);
-	box-shadow: .5px .5px #ddd;
+.left p{
+    margin-bottom: 90px;
+    font-size: 30px;
+    color: white;
+}
+
+.rigth p{
+    margin-bottom: 90px;
+    font-size: 30px;
+    color: white;
 }
 `
 
-export {PickUpDiv}
+export {GameDiv}

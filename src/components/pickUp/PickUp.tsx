@@ -1,27 +1,29 @@
+import React, { FC, useRef } from 'react'
 import { PickUpDiv } from './pickUp.styles'
 import {ReactComponent as Rock} from '../../images/icon-rock.svg'
 import {ReactComponent as Paper} from '../../images/icon-paper.svg'
 import {ReactComponent as Scissors} from '../../images/icon-scissors.svg'
-import { FC } from 'react'
+import {Props} from '../main/model'
 
-const Props = {
-    pick: string,
-    setPick: React.Dispatch<React.SetStateAction<string>>
-}
 
-const PickUp: FC<Props> = (pick, setPick) => {
+const PickUp: FC<Props> = ({pick, setPick}) => {
+
+    const handleClick = (e:React.MouseEvent<HTMLElement>) =>{
+        setPick(e.currentTarget.id)
+    } 
+
     return (
         <PickUpDiv>
             <div className="two">
-                <div className="svg paper">
-                    <Paper fill='hsl(229, 25%, 31%)'/>
+                <div id="paper" className="svg paper" onClick={(e:React.MouseEvent<HTMLElement>) => handleClick(e)}>
+                    <Paper />
                 </div>
-                <div className="svg scissors">
+                <div id="scissors" className="svg scissors" onClick={(e:React.MouseEvent<HTMLElement>) => handleClick(e)}> 
                     <Scissors/>
                 </div>
             </div>
             <div className="one">
-            <div className="svg rock">
+            <div id="rock" className="svg rock" onClick={(e:React.MouseEvent<HTMLElement>) => handleClick(e)}>
                 <Rock/>
             </div>
             </div>

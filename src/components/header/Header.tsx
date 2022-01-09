@@ -1,6 +1,7 @@
 import { HeaderDiv } from './header.styles'
-
-const Header = () => {
+import {GameProps} from '../main/model'
+import { FC } from 'react'
+const Header: FC<GameProps> = ({game}) => {
 	return (
 		<HeaderDiv>
 			<h1>
@@ -10,7 +11,7 @@ const Header = () => {
 			</h1>
 			<div className="score">
 				<span>SCORE</span>
-				<span>0</span>
+				<span>{game}</span>
 			</div>
 		</HeaderDiv>
 	)
