@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 	*{
@@ -14,4 +14,9 @@ const GlobalStyle = createGlobalStyle`
 	}
 `
 
-export { GlobalStyle }
+const MainDiv = styled.div`
+	display:flex;
+	flex-direction:column;
+`
+
+export { GlobalStyle, MainDiv }

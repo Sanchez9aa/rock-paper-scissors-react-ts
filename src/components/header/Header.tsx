@@ -1,4 +1,3 @@
-import React from 'react'
 import { HeaderDiv } from './header.styles'
 
 const Header = () => {
@@ -13,7 +12,6 @@ const Header = () => {
 				<span>SCORE</span>
 				<span>0</span>
 			</div>
-
 		</HeaderDiv>
 	)
 }

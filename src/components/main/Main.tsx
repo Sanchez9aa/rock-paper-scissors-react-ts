@@ -1,14 +1,17 @@
-import React from 'react'
-import Game from '../game/Game'
+import PickUp from '../pickUp/PickUp'
 import Header from '../header/Header'
-import { GlobalStyle } from './main.styled'
+import { GlobalStyle , MainDiv} from './main.styled'
+import { useState } from 'react'
 
 const Main = () => {
+
+    const [pick, setPick] = useState<string>("")
+
     return (
         <>
             <GlobalStyle/>
 			<Header/>
-            <Game/>
+            <PickUp pick={pick}/>    
         </>
     )
 }
